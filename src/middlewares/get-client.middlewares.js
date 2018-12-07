@@ -2,9 +2,12 @@ const DotEnv = require("dotenv");
 const Clients = require("../../.clients.js");
 
 const getClient = (req, res, next) => {
+  const env = DotEnv.config();
+  console.log(env);
   const client = req.header("client")
     ? req.header("client")
     : process.env.SERVER_DEFAULT_CLIENT;
+  console.log(Clients);
   req.$client = Clients[client] ? Clients[client] : {};
 
   if (!req.$client || !Object.keys(req.$client).length) {
