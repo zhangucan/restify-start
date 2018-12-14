@@ -10,7 +10,6 @@ const getRoutesFilesFromDirname = dirname => {
     if ( isRouteFile( fp ) ) {
       return true
     }
-
     return IsDirectory.sync( Path.join( dir, fp ) )
   }, true)
 }
