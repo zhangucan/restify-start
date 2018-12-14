@@ -16,8 +16,7 @@ const getRoutesFilesFromDirname = dirname => {
 }
 
 const loadRoutesByPath = dirName => {
-  const routes = getRoutesFilesFromDirname( dirName )
-    .map( require )
+  const routes = getRoutesFilesFromDirname( dirName ).map( require )
   return flatten( routes )
 }
 
