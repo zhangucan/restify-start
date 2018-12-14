@@ -1,6 +1,6 @@
-const EncryptText = require('../../../../../support/in-house-functions/cryptography/encrypt-text.js')
-const CurrentDatetimeUtc = require('../../../../../support/in-house-functions/date-time/current-datetime-utc.js')
-const GetModel = require('../../../get-model.js')
+const EncryptText = require('../../../../support/in-house-functions/cryptography/encrypt-text')
+const CurrentDatetimeUtc = require('../../../../support/in-house-functions/date-time/current-datetime-utc')
+const GetModel = require('../../../get-model')
 
 const omitFields = { password: 0 }
 

@@ -12,7 +12,7 @@ const createValidations = Fs.existsSync( Path.join( __dirname, pathToValidation 
   : {}
 
 const route = {
-    method: 'post'
+    method: 'put'
   , path: `/${ thisUnit }`
   , name: `${ thisUnit }:${ thisRoute }`
   , version: '0.0.1'
