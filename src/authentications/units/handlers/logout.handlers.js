@@ -1,10 +1,10 @@
 const Path = require('path')
-const thisUnit = Path.dirname( Path.dirname( __filename ) ).split( Path.sep ).pop()
+const thisModel = Path.dirname(Path.dirname( Path.dirname( __filename ) )) .split( Path.sep ).pop()
 const thisHandler = Path.basename( __filename ).split( '.' )[ 0 ]
 const BusinessRules = require(`../../domains/business-rules/${thisHandler}.js`)
 
 const logout = async (req, res, next) => {
-  req.$model = thisUnit
+  req.$model = thisModel
   try {
     const query = { token: req.body.token}
     await BusinessRules.logout( req, query )
