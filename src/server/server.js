@@ -10,6 +10,7 @@ const serverOptions = {
   port: process.env.SERVER_PORT || "5550"
 };
 
+
 const createServer = serverOptions => {
   const server = Restify.createServer(serverOptions);
   server.use(Restify.plugins.bodyParser({ mapParams: true }));
